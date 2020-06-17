@@ -1,4 +1,4 @@
-# [Neural Contraction Metric](https://arxiv.org/abs/2006.04361) Python Package for Convex Optimization-based Nonlinear Robust Estimation and Control
+# [Neural Contraction Metric](https://arxiv.org/abs/2006.04361) Python Package for Convex Optimization-based Robust Nolinear Estimation and Control
 This repository contains "classncm.py" class file and several jupyter notebook examples for designing a Neural Contraction Metric (NCM) intruduced in [this paper](https://arxiv.org/abs/2006.04361). Here are some important facts about the NCM.
 1. The NCM is a global neural network-based approximation of an optimal contraction metric.
 2. The existence of a contraction metric is a necessary and sufficient condition for exponential stability of nonlinear systems. 
