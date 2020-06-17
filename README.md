@@ -19,3 +19,4 @@ Samples optimal contraction metrics of a given dynamical system in a given state
 Finds the optimal contraction rate by line search.
 * [simulation(dt,tf,x0,z0=None,dscale=10.0,xnames="num",Ncol=1,FigSize=(20,10),FontSize=20)](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)\
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
+* Due to the differential formulation of contraction analysis, there exists a nonlinear version of estimation and control duality, analogous to the one of the Kalman filter and LQR duality in linear systems.
