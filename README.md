@@ -22,9 +22,9 @@ Finds the optimal contraction rate by line search.
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
 ## Troubleshooting
 The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choises of parameters. Here are some tips in avoiding such infeasibility in practice.
-### Start from a smaller value of alpha (contraction rate)
+#### Start from a smaller value of alpha (contraction rate)
 Since the stability constraint becomes tighter as alpha becomes larger, set alims[0] (minimum alpha) smaller.
-### Select smaller state space
+#### Select smaller state space
 Since larger state space could lead to stricter stability constraints, set Xlims to represent the smaller state space.
 ### Change d1_over and d2_over from their default values
 Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
