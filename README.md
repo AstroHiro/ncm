@@ -28,9 +28,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Files
-* classncm.py: class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
 * NCMestimation.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
 * NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
+* classncm.py: class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
+## Quick guide to NCMestimation.ipynb and NCMcontrol.ipynb
+### Required packages
+In addition to standard python packages like numpy, you need [CVXPY](https://www.cvxpy.org/install/index.html) and [Mosek](https://docs.mosek.com/9.2/install/installation.html) to solve convex optimization problems, [Keras](https://keras.io/about/) and [TensorFlow](https://www.tensorflow.org/install) to construct neural networks. Keras comes packaged with TensorFlow 2.0 as tensorflow.keras. To start using Keras, you can simply install TensorFlow 2.0.\
+The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
+### List of things you need at least
+* nonlinear dynamical system
+* nonlinear measurement equation for state estimation or actionation matrix for feedback control
+* state space of interest
+* your guess of contraction rate (just put a small number if not sure)
 ## Quick guide to classncm.py
 The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful mothods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
 * [ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)\
