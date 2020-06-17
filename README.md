@@ -3,4 +3,5 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 * The NCM is a global neural network-based approximation of an optimal contraction metric.
 * The existence of a contraction metric is a necessary and sufficient condition for exponential stability of nonlinear systems. 
 * The optimality of NCMs stems from the fact that the contraction metrics sampled offline are the solutions of a convex optimization problem (see [CV-STEM](https://arxiv.org/abs/2006.04359) for more details) to minimize an upper bound of the steady-state Euclidean distance between perturbed and unperturbed system trajectories.
-## sfad
+## Files
+* classncm.py: class file that contains functions required for constructing an NCM for a given nonlinear dynamical systems
