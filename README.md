@@ -5,7 +5,7 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 2. The existence of a contraction metric is a necessary and sufficient condition for exponential stability of nonlinear systems. 
 3. The optimality of NCMs stems from the fact that the contraction metrics sampled offline are the solutions of a convex optimization problem (see [CV-STEM](https://arxiv.org/abs/2006.04359) for more details) to minimize an upper bound of the steady-state Euclidean distance between perturbed and unperturbed system trajectories.
 4. Due to the differential formulation of contraction analysis, there exists a nonlinear version of estimation and control duality, analogous to the one of the Kalman filter and LQR duality in linear systems (see the [NCM paper](https://arxiv.org/abs/2006.04361) for more).
-## License
+## [License](https://github.com/AstroHiro/ncm/blob/master/LICENSE.txt)
 MIT License
 
 Copyright (c) 2020 [Hiroyasu Tsukamoto](https://hirotsukamoto.com/)
