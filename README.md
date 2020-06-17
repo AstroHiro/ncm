@@ -5,6 +5,7 @@ This repository contains the [NCM class](https://github.com/AstroHiro/ncm/wiki/D
 2. The existence of a contraction metric is a necessary and sufficient condition for exponential stability of nonlinear systems. 
 3. The optimality of NCMs stems from the fact that the contraction metrics sampled offline are the solutions of a convex optimization problem (see [CV-STEM](https://arxiv.org/abs/2006.04359) for more details) to minimize an upper bound of the steady-state Euclidean distance between perturbed and unperturbed system trajectories.
 4. Due to the differential formulation of contraction analysis, there exists a nonlinear version of estimation and control duality, analogous to the one of the Kalman filter and LQR duality in linear systems (see the [NCM paper](https://arxiv.org/abs/2006.04361) for more).
+5. Note that the NCM class file assumes input affine autonomous nonlinear systems, but you can always convert input non-affine non-autonomous systems into a input affine autonomous from by treating t as a state variable and du/dt as a control input.
 ## [License](https://github.com/AstroHiro/ncm/blob/master/LICENSE.txt)
 MIT License
 
