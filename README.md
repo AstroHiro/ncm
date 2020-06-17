@@ -28,9 +28,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Files
-* NCMestimation.ipynb : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
-* NCMcontrol.ipynb : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
-* classncm.py : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
+* [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
+* [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
+* [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
 ## Quick guide to NCMestimation.ipynb and NCMcontrol.ipynb
 ### Required software
 In addition to standard python packages like numpy, you need several other packages and software. The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
