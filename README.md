@@ -29,7 +29,6 @@ The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm
 * **Change d1_over and d2_over from their default values** : Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
 * **Set epsilon to some positive value** : There is a parameter called epsilon in the NCM class, and if you select epsilon > 0 then the stability condition can be relaxed. You could also use epsilon as a decision variable and minimize it to have tightest relaxation but stability in a sense described in the [NCM paper](https://arxiv.org/abs/2006.04361) is no longer guaranteed.
 * If all of these approaches do not work and you need any help, please [contact us](https://hirotsukamoto.com/).
-MIT License
 ## License
 MIT License
 
