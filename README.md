@@ -9,7 +9,7 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 * NCMestimation.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
 * NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
 ## Quick guide to classncm.py
-The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/NCM-Documentation). Here we introduce some useful mothods for the NCM design.
+The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/NCM-Documentation). Here we introduce some useful mothods for the NCM design. The trade-off between larger feedback gains and (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
 * [ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)\
 Returns a trained NCM with respect to a given state.
 * train(iTrain=1,Nbatch=32,Nlayers=3,Nunits=100,Nepochs=10000,ValidationSplit=0.1,Patience=20)\
@@ -22,4 +22,10 @@ Finds the optimal contraction rate by line search.
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
 ## Troubleshooting
 The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choises of parameters. Here are some tips in avoiding such infeasibility in practice.
+* Start from a smaller value of alpha (contraction rate)\
+Since the stability constraint becomes tighter as alpha becomes larger, set alims[0] (minimum alpha) smaller.
+* Select smaller state space
+Since larger state space could lead to stricter stability constraints, set Xlims to represent the smaller state space.
+* along trajectory
+* change d_over and 
 
