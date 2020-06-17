@@ -22,11 +22,13 @@ Finds the optimal contraction rate by line search.
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
 ## Troubleshooting
 The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choises of parameters. Here are some tips in avoiding such infeasibility in practice.
-* Start from a smaller value of alpha (contraction rate)\
+* Start from smaller value of alpha (contraction rate)\
 Since the stability constraint becomes tighter as alpha becomes larger, set alims[0] (minimum alpha) smaller.
 * Select smaller state space\
 Since larger state space could lead to stricter stability constraints, set Xlims to represent the smaller state space.
+* Try larger CV-STEM sampling period\
+It is better to use a smaller CV-STEM sampling period dt when computing dW/dt (W: normalized inverse of a contraction metric) from a theoretical point of view, but it could cause some numerical issues. You could relax dt to some larger values or solve CV-STEM along pre-computed system trajectories.
 * Change d1_over and d2_over from their default values\
 Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
-* Solve the CV-STEM problems along the pre-computed trajectories.\
-The NCM class computes dM/dt using a lower bound of the induced 2-norm of a contraction metric. You could run the CV-STEM along given trajectories as was done in the [NCM paper](https://arxiv.org/abs/2006.04361) seeking for a less tight stability condition. The details are given in the source codes of this paper.
+* Solve CV-STEM problems along pre-computed trajectories\
+The NCM class computes dW/dt (W: normalized inverse of a contraction metric) using a lower bound of the induced 2-norm of a contraction metric. You could run the CV-STEM along given trajectories as was done in the [NCM paper](https://arxiv.org/abs/2006.04361) seeking for a less tight stability condition. The details are given in the source codes of this paper.
