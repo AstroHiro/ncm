@@ -28,7 +28,8 @@ Since the stability constraint becomes tighter as alpha becomes larger, set alim
 Since larger state space could lead to stricter stability constraints, set Xlims to represent the smaller state space.
 * Try larger CV-STEM sampling period\
 It is better to use a smaller CV-STEM sampling period dt when computing dW/dt (W: normalized inverse of a contraction metric) from a theoretical point of view, but it could cause some numerical issues. You could relax dt to some larger values or solve CV-STEM along pre-computed system trajectories.
-* Change d1_over and d2_over from their default values\
-Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
 * Solve CV-STEM problems along pre-computed trajectories\
 The NCM class computes dW/dt (W: normalized inverse of a contraction metric) using a lower bound of the induced 2-norm of a contraction metric. You could run the CV-STEM along given trajectories as was done in the [NCM paper](https://arxiv.org/abs/2006.04361) seeking for a less tight stability condition. The details are given in the source codes of this paper.
+* Change d1_over and d2_over from their default values\
+Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
+* There is a parameter called epsilon in the NCM class, and if you select epsilon > 0 then the stability condition can be relaxed. You could also use epsilon as a decision variable and minimize it to have tightest relaxation but stability in a sense described in the [NCM paper](https://arxiv.org/abs/2006.04361) is no longer guaranteed.
