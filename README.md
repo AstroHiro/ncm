@@ -10,13 +10,16 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 * NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
 ## Quick guide to classncm.py
 The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/NCM-Documentation). Here we introduce some useful mothods for the NCM design.
-* [ncm(x)](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)\
+* [ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)\
 Returns a trained NCM with respect to a given state.
 * train(iTrain=1,Nbatch=32,Nlayers=3,Nunits=100,Nepochs=10000,ValidationSplit=0.1,Patience=20)\
 Trains a neural network to be used for designing an NCM and returns a Keras neural network model.
-* [cvstem()](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)\
+* [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)\
 Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method.
-* [linesearch()](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-linesearch)\
+* [linesearch](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-linesearch)\
 Finds the optimal contraction rate by line search.
-* [simulation(dt,tf,x0,z0=None,dscale=10.0,xnames="num",Ncol=1,FigSize=(20,10),FontSize=20)](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)\
+* [simulation](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)\
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
+## Troubleshooting
+The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choises of parameters. Here are some tips in avoiding such infeasibility in practice.
+
