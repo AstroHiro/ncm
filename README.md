@@ -1,10 +1,10 @@
 # [Neural Contraction Metric (NCM)](https://arxiv.org/abs/2006.04361) Python Package 
 ### Real-time robust nolinear estimation and control: a convex optimization approach
-Here is the list of things you can achieve using this repositroy.
-## NCM class automatically computes
+Here is a brief summary of what you can achieve with this repository.
+#### NCM class automatically computes
 * optimal and provably-stable state estimation and control policies of a given nonlinear dynamical system
 * [Neural Contraction Metrics (NCMs)](https://arxiv.org/abs/2006.04361)
-## Given the following parameters
+#### Given the following parameters
 * nonlinear dynamical system : f of dx/dt = f(x)+g(x)u
 * measurement equation (for state estimation) : h of y = h(x)
 * actionation matrix (for feedback control) : g of dx/dt = f(x)+g(x)u
