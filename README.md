@@ -1,3 +1,4 @@
-# NCM (Coming soon!)
-Codes for designing Neural Contraction Metrics (NCMs)
+# [Neural Contraction Metrics for Robust Estimation and Control: A Convex Optimization Approach](https://arxiv.org/abs/2006.04361)
+This repository contains "classncm.py" class file and several jupyter notebooks for designing a Neural Cnotraction Metric (NCM) intruduced in [this paper](https://arxiv.org/abs/2006.04361). The NCM is a global neural network-based approximation of an optimal contraction metric, the existence of which is a necessary and sufficient condition for exponential stability of nonlinear systems. The optimality stems from the fact that the contraction metrics sampled offline are the solutions of a convex optimization problem (see [CV-STEM](https://arxiv.org/abs/2006.04359) for more details) to minimize an upper bound of the steady-state Euclidean distance between perturbed and unperturbed system trajectories (see )
+We demonstrate how to exploit NCMs to design an online optimal estimator and controller for nonlinear systems with bounded disturbances utilizing their duality. The performance of our framework is illustrated through Lorenz oscillator state estimation and spacecraft optimal motion planning problems.
 ## sfad
