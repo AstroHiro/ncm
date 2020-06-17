@@ -6,7 +6,8 @@ Here is the list of things you can achieve using this repositroy.
 * [Neural Contraction Metrics (NCMs)](https://arxiv.org/abs/2006.04361)
 ## Given the following parameters
 * nonlinear dynamical system : f of dx/dt = f(x)+g(x)u)
-* measurement equation (estimation) or actionation matrix (control) : h of y = h(x) or g of dx/dt = f(x)+g(x)u)
+* measurement equation (for estimation) : h of y = h(x)
+* actionation matrix (for control) : g of dx/dt = f(x)+g(x)u)
 * state space of interest
 
 contains the [NCM class](https://github.com/AstroHiro/ncm/wiki/Documentation) file which automatically constructs an NCM of a given nonlinear dynamical system, and [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) examples for [estimation](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [control](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) of nonlinear dynamical systems using an NCM intruduced in [this paper](https://arxiv.org/abs/2006.04361). Here are some important facts about the NCM.
