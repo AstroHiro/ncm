@@ -28,9 +28,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Files
-* NCMestimation.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
-* NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
-* classncm.py: class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
+* NCMestimation.ipynb : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
+* NCMcontrol.ipynb : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
+* classncm.py : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
 ## Quick guide to NCMestimation.ipynb and NCMcontrol.ipynb
 ### Required software
 In addition to standard python packages like numpy, you need several other packages and software. The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
@@ -44,16 +44,11 @@ In addition to standard python packages like numpy, you need several other packa
 * your guess of contraction rate (just put a small number if not sure)
 ## Quick guide to classncm.py
 The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful mothods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
-* [ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)\
-Returns a trained NCM with respect to a given state.
-* train(iTrain=1,Nbatch=32,Nlayers=3,Nunits=100,Nepochs=10000,ValidationSplit=0.1,Patience=20)\
-Trains a neural network to be used for designing an NCM and returns a Keras neural network model.
-* [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)\
-Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method.
-* [linesearch](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-linesearch)\
-Finds the optimal contraction rate by line search.
-* [simulation](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)\
-Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
+* **[ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)** : Returns a trained NCM with respect to a given state.
+* train(iTrain=1,Nbatch=32,Nlayers=3,Nunits=100,Nepochs=10000,ValidationSplit=0.1,Patience=20) : Trains a neural network to be used for designing an NCM and returns a Keras neural network model.
+* **[cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)** : Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method.
+* **[linesearch](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-linesearch)** : Finds the optimal contraction rate by line search.
+* **[simulation](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)** : Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
 ## Troubleshooting
 The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choises of parameters. Here are some tips in avoiding such infeasibility in practice.
 * **Start from smaller value of alpha** : Since the stability constraint becomes tighter as alpha (contraction rate) becomes larger, set alims[0] (minimum alpha) smaller.
