@@ -9,5 +9,11 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 * NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
 ## Quick guide to classncm.py
 The detailed explanation on its methods and objects are given in the comments of this class file. Here we introduce some useful mothods for the NCM design.
+* ncm(x)\
+Returns a trained NCM with respect to a given state.
 * train(iTrain=1,Nbatch=32,Nlayers=3,Nunits=100,Nepochs=10000,ValidationSplit=0.1,Patience=20)\
-Train neural network of NCM
+Trains a neural network to be used for desiging an NCM and returns a Keras neural network model.
+* cvstem()
+Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method
+* linesearch()
+Finds the optimal contraction rate
