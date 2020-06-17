@@ -7,3 +7,6 @@ This repository contains "classncm.py" class file and several jupyter notebook e
 * classncm.py: class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
 * NCMestimation.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
 * NCMcontrol.ipynb: jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
+## Quick guide to classncm.py
+The detailed explanation on its methods and objects are given in the comments of this class file. Here we introduce some useful mothods for the NCM design.
+* 
