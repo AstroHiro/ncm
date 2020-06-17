@@ -17,5 +17,5 @@ Trains a neural network to be used for desiging an NCM and returns a Keras neura
 Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method
 * linesearch()\
 Finds the optimal contraction rate by line search
-* simulation(dt,tf,x0,z0=None,dscale=10.0,xnames="num",Ncol=1,FigSize=(20,10),FontSize=20):
+* simulation(dt,tf,x0,z0=None,dscale=10.0,xnames="num",Ncol=1,FigSize=(20,10),FontSize=20)\
 Performs NCM-based estimation or control of a given nolinear dynamical systems and returns simulation results.
