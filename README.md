@@ -32,7 +32,7 @@ SOFTWARE.
 * [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
 * [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
 * [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
-## Quick guide to NCMestimation.ipynb and NCMcontrol.ipynb
+## Quick guide to [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb)
 ### Required software
 In addition to standard python packages like numpy, you need several other packages and software. The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
 * [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) to see and edit codes
@@ -43,7 +43,7 @@ In addition to standard python packages like numpy, you need several other packa
 * nonlinear measurement equation for state estimation or actionation matrix for feedback control
 * state space of interest
 * your guess of contraction rate (just put a small number if not sure)
-## Quick guide to classncm.py
+## Quick guide to [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py)
 The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful mothods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
 * **[ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)** : Returns a trained NCM with respect to a given state.
 * **[train](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-train)** : Trains a neural network to be used for designing an NCM and returns a Keras neural network model.
@@ -55,7 +55,7 @@ The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm
 * **Start from smaller value of alpha** : Since the stability constraint becomes tighter as alpha (contraction rate) becomes larger, set alims[0] (minimum alpha) smaller.
 * **Select smaller state space** : Since larger state space could lead to stricter stability constraints, set Xlims to represent the smaller state space.
 * **Use larger CV-STEM sampling period** : It is better to use a smaller CV-STEM sampling period dt when computing dW/dt (W: normalized inverse of a contraction metric) from a theoretical point of view, but it could cause some numerical issues. You could relax dt to some larger values or solve CV-STEM along pre-computed system trajectories.
-* **Solve CV-STEM problems along pre-computed trajectories** : The NCM class computes dW/dt (W: normalized inverse of a contraction metric) using a lower bound of the induced 2-norm of a contraction metric. You could run the CV-STEM along given trajectories as was done in the [NCM paper](https://arxiv.org/abs/2006.04361) seeking for a less tight stability condition. The details are given in the source codes of this paper.
+* **Solve CV-STEM problems along pre-computed trajectories** : The NCM class computes dW/dt (W: normalized inverse of a contraction metric) using a lower bound of the induced 2-norm of a contraction metric. You could run the CV-STEM along given trajectories as was done in the [NCM paper](https://arxiv.org/abs/2006.04361) seeking for a less tight stability condition. The [source codes of this paper](https://github.com/AstroHiro/ncm/tree/master/sourcecodes) will give you some ideas.
 * **Change d1_over and d2_over from their default values** : Although this will not affect the infeasibility theoretically, it may solve some numerical issues.
 * **Set epsilon to some positive value** : There is a parameter called epsilon in the NCM class, and if you select epsilon > 0 then the stability condition can be relaxed. You could also use epsilon as a decision variable and minimize it to have tightest relaxation but stability in a sense described in the [NCM paper](https://arxiv.org/abs/2006.04361) is no longer guaranteed.
 * **Try different solvers** : The default solver for the NCM class is [Mosek](https://docs.mosek.com/9.2/install/installation.html). You can change "solver=cp.MOSEK" in the class file to [something different such as cp.CVXOPT](https://www.cvxpy.org/tutorial/advanced/index.html).
