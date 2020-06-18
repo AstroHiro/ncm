@@ -1,14 +1,14 @@
 # [Neural Contraction Metric (NCM)](https://arxiv.org/abs/2006.04361) Python Package 
 Welcome to our NCM python package for **real-time robust nolinear estimation and control via convex optimization**. Here is a brief summary of what you can achieve with this repository.
-#### NCM class automatically computes
-* optimal and provably-stable state estimation and control policies of a given nonlinear dynamical system
+### NCM class automatically computes
+* **optimal**, **provably-stable**, and **real-time** state estimation and control policies of a given nonlinear dynamical system
 * [Neural Contraction Metrics (NCMs)](https://arxiv.org/abs/2006.04361)
-#### Given the following parameters
+### Given the following parameters
 * nonlinear dynamical system : f of dx/dt = f(x)+g(x)u
 * measurement equation (for state estimation) : h of y = h(x)
 * actionation matrix (for feedback control) : g of dx/dt = f(x)+g(x)u
 * state space of your interest
-
+## [Neural Contraction Metrics (NCMs)](https://arxiv.org/abs/2006.04361)
 This repository contains the [NCM class](https://github.com/AstroHiro/ncm/wiki/Documentation) file which automatically constructs an NCM of a given nonlinear dynamical system, and [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) examples for [estimation](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [control](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) of nonlinear dynamical systems using an NCM intruduced in [this paper](https://arxiv.org/abs/2006.04361). Here are some important facts about the NCM.
 1. The NCM is a global neural network-based approximation of an optimal contraction metric.
 2. The existence of a contraction metric is a necessary and sufficient condition for exponential stability of nonlinear systems. 
