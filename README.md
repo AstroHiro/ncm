@@ -40,7 +40,7 @@ SOFTWARE.
 ## Files
 * [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) : Jupyter Notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
 * [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) : Jupyter Notebook that illustrates how to use classncm.py for nonlinear optimal feedback control
-* [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
+* [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM of a given nonlinear dynamical system
 ## Quick guide to [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb)
 ### Required software
 In addition to standard python packages like numpy, you need several other packages and software. The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
