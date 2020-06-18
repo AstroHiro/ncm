@@ -53,7 +53,7 @@ In addition to standard python packages like numpy, you need several other packa
 * actuation matrix (for feedback control) : g of dx/dt = f(x)+g(x)u
 * your guess of contraction rate : just put a small number if not sure
 ## Quick guide to [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py)
-The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful methods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
+The detailed explanation on its methods and objects are given in [the documentation](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful methods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
 * **[ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)** : Returns a trained NCM with respect to a given state.
 * **[train](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-train)** : Trains a neural network to be used for designing an NCM and returns a Keras neural network model.
 * **[cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)** : Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method.
