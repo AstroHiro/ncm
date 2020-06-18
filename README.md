@@ -43,7 +43,7 @@ SOFTWARE.
 * [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM of a given nonlinear dynamical system
 ## Quick guide to [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb)
 ### Required software
-In addition to standard python packages like numpy, you need several other packages and software. The NCM class file "classncm.py" has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
+In addition to standard python packages like numpy, you need several other packages and software. The NCM class file [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) has been verified to work with CVXPY 1.1.1, Mosek 9.2.11, TensorFlow 2.2.0, and Keras 2.3.1.
 * [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) to see and edit codes
 * [CVXPY](https://www.cvxpy.org/install/index.html) and [Mosek](https://docs.mosek.com/9.2/install/installation.html) to solve convex optimization problems
 * [Keras](https://keras.io/about/) and [TensorFlow](https://www.tensorflow.org/install) to construct neural networks (Keras comes packaged with TensorFlow 2.0 as tensorflow.keras)
