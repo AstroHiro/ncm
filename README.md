@@ -39,7 +39,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Files
 * [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal state estimation
-* [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedbck control
+* [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb) : jupyter notebook that illustrates how to use classncm.py for nonlinear optimal feedback control
 * [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py) : class file that contains functions required for constructing an NCM for a given nonlinear dynamical system
 ## Quick guide to [NCMestimation.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMestimation.ipynb) and [NCMcontrol.ipynb](https://github.com/AstroHiro/ncm/blob/master/NCMcontrol.ipynb)
 ### Required software
