@@ -48,10 +48,10 @@ In addition to standard python packages like numpy, you need several other packa
 * [CVXPY](https://www.cvxpy.org/install/index.html) and [Mosek](https://docs.mosek.com/9.2/install/installation.html) to solve convex optimization problems
 * [Keras](https://keras.io/about/) and [TensorFlow](https://www.tensorflow.org/install) to construct neural networks (Keras comes packaged with TensorFlow 2.0 as tensorflow.keras)
 ### List of things you need at least
-* nonlinear dynamical system
-* nonlinear measurement equation for state estimation or actuation matrix for feedback control
-* state space of interest
-* your guess of contraction rate (just put a small number if not sure)
+* nonlinear dynamical system : f of dx/dt = f(x)+g(x)u
+* measurement equation (for state estimation) : h of y = h(x)
+* actuation matrix (for feedback control) : g of dx/dt = f(x)+g(x)u
+* your guess of contraction rate : just put a small number if not sure
 ## Quick guide to [classncm.py](https://github.com/AstroHiro/ncm/blob/master/classncm.py)
 The detailed explanation on its methods and objects are given in [this page](https://github.com/AstroHiro/ncm/wiki/Documentation). Here we introduce some useful methods for the NCM design. The trade-off between larger feedback gains (larger nu) and smaller steady-state tracking error (smaller chi) discussed in the NCM paper can be handled by changing the values d1_over and d2_over in the NCM class.
 * **[ncm](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-ncm)** : Returns a trained NCM with respect to a given state.
