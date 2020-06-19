@@ -59,7 +59,7 @@ The detailed explanation on its methods and objects are given in [the documentat
 * **[cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem)** : Samples optimal contraction metrics of a given dynamical system in a given state space by the [CV-STEM](https://arxiv.org/abs/2006.04359) method. These metrics will be used for the neural network training in the train method.
 * **[linesearch](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-linesearch)** : Finds the optimal contraction rate by line search.
 * **[simulation](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-simulation)** : Performs NCM-based estimation or control of a given nonlinear dynamical systems and returns simulation results.
-## Troubleshooting
+## [Troubleshooting](https://github.com/AstroHiro/ncm/wiki/Have-some-issues-with-the-NCM-package%3F)
 The convex optimization problem in the [cvstem](https://github.com/AstroHiro/ncm/wiki/NCM-methods:-cvstem) method could become infeasible for some nonlinear dynamical systems under certain choices of parameters. Here are some tips in avoiding such infeasibility in practice.
 * **Start from smaller value of alpha** : Since the stability constraint becomes tighter as alpha (contraction rate) becomes larger, set alims[0] (minimum alpha) smaller.
 * **Select smaller state space** : Since larger state space could lead to stricter stability constraints, set xlims to represent smaller state space.
