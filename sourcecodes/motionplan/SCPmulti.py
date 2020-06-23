@@ -100,7 +100,7 @@ class DesiredTrajectories:
 
     def one_step_sim(self,t,X,U):
         runge_num = self.runge_num
-        for num in range(0, runge_num): #self.X, self.tを更新することで全体で更新
+        for num in range(0, runge_num):
              t,X = self.rk4(t,X,U)
         return t,X
 
